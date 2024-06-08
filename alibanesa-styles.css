@@ -1,0 +1,45 @@
+/* button collapse aditionals */
+#etapa1detalhes #headingTwo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#etapa1detalhes #headingTwo #collapseAditionals {
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 300ms;
+}
+#collapseAditionals.active {
+  transform: rotateX(180deg) translateY(5px);
+}
+#collapseAditionals svg path {
+  fill: #fff;
+}
+
+/* aditionals collapse */
+#etapa1detalhes.isAditionals .panel-body {
+  height: 0;
+  transition: all 300ms;
+  overflow: hidden;
+  padding: 5px 15px;
+}
+#etapa1detalhes.isAditionals .panel-body.active {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+/* add a quantity text */
+#cardapioItemForm .modal-footer .flex-container .flex-item.mr::after {
+  content: "Quantidade";
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav#submitButtons .btn.btn-lg.btn-block.btn-square.btn-success.text-bold.checkoutSubmitButtons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+}
