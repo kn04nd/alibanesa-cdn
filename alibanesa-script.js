@@ -120,6 +120,10 @@
 
     document.querySelector('.tempoEstimadoSelected').innerText = `Retirar: ${tempoRetirar}min - Entregar: ${parseInt(tempoEntrega)-25}min-${tempoEntrega}min`
 
+    window.lfka.tempoRetirar = parseInt(tempoRetirar);
+    window.lfka.tempoEntregaMin =  parseInt(tempoEntrega)-25
+    window.lfka.tempoEntregaMin =  parseInt(tempoEntrega)
+    
     window.lfka.changeTime = true
   }
 
