@@ -122,7 +122,7 @@
 
     window.lfka.tempoRetirar = parseInt(tempoRetirar);
     window.lfka.tempoEntregaMin =  parseInt(tempoEntrega)-25
-    window.lfka.tempoEntregaMin =  parseInt(tempoEntrega)
+    window.lfka.tempoEntregaMax =  parseInt(tempoEntrega)
     
     window.lfka.changeTime = true
   }
@@ -139,4 +139,12 @@
       clearInterval(changeDetails);
     }
   }, 300);
+
+  const addTimeToCheckout = setInterval(() => {
+    if (window.localtion.href.includes('checkout')) {
+      let content = document.querySelector('#main-section .content-wrapper')
+      let div = `<div class='row'>Retirar: ${window.lfka.tempoRetirar}min - Entregar: ${window.lfka.tempoEntregaMin}min-${window.lfka.tempoEntregaMax}min</div>`;
+      content.insertAdjacentHTML('afterbegin', div);
+    }
+  }, 300)
 })();
