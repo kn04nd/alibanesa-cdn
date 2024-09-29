@@ -141,7 +141,7 @@
   }, 300);
 
   const addTimeToCheckout = setInterval(() => {
-    if (window.localtion.href.includes('checkout')) {
+    if (window.location.href.includes('checkout')) {
       let content = document.querySelector('#main-section .content-wrapper')
       let div = `<div class='row'>Retirar: ${window.lfka.tempoRetirar}min - Entregar: ${window.lfka.tempoEntregaMin}min-${window.lfka.tempoEntregaMax}min</div>`;
       content.insertAdjacentHTML('afterbegin', div);
