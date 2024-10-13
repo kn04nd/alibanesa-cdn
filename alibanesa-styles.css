@@ -43,3 +43,16 @@ nav#submitButtons .btn.btn-lg.btn-block.btn-square.btn-success.text-bold.checkou
   left: 0;
   border-radius: 0;
 }
+
+a.text-white[data-modalatendimento="detalhesAtendimentoModal"] {
+  animation: piscarCor 2s infinite;
+}
+
+@keyframes piscarCor {
+  0%, 100% {
+    color: white;
+  }
+  50% {
+    color: red;
+  }
+}
